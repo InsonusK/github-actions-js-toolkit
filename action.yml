@@ -1,0 +1,11 @@
+name: "toolkit test"
+
+description: "js action that use github toolkit"
+inputs:
+  myToken:
+    description: "GitHub Token"
+    required: true
+
+runs:
+  using: "dist/node12"
+  main: "dist/index.js"
