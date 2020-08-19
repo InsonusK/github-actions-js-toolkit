@@ -16,9 +16,10 @@ async function run(): Promise<void> {
     });
     core.info(`-- octokit.repos.listReleases: length = ${repoList.data.length}`);
     repoList.data.forEach((element) => {
-        core.info(`--- id:${element.id} name:${element.name}---`);
-        core.info(`body.length = ${element.body.length}`)
-        core.info(`${element.body.toString()}`);
+        core.info(`--- element.id:${element.id}`);
+        core.info(`--- element.name:${element.name}`);
+        core.info(`--- element.draft:${element.draft}`);
+        core.info(`--- element.prerelease:${element.prerelease}`);
     })
 }
 
