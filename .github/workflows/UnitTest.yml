@@ -1,6 +1,6 @@
 name: JS Actions
 
-on: [push]
+on: [push, release]
 
 jobs:
   action:
