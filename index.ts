@@ -5,6 +5,8 @@ async function run(): Promise<void> {
     const myToken = core.getInput('myToken');
     const octokit = github.getOctokit(myToken);
     core.info(`github.context.actor: ${github.context.actor}`);
+    core.info(`github.context.repo.repo: ${github.context.repo.repo}`);
+    core.info(`github.context.repo.owner: ${github.context.repo.owner}`);
 
     let repoList = await octokit.repos.listReleases({
         repo: github.context.repo.repo,
@@ -12,8 +14,8 @@ async function run(): Promise<void> {
         per_page: 10,
         page: 1
     });
-    core.warning(`octokit.repos.listReleases:`);
-    repoList.data.forEach((element)=>{
+    core.info(`-- octokit.repos.listReleases: length = ${repoList.data.length}`);
+    repoList.data.forEach((element) => {
         core.info(`--- id:${element.id} name:${element.name}---`);
         core.info(`${element.body}`);
     })
