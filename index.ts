@@ -19,6 +19,7 @@ async function run(): Promise<void> {
         core.info(`--- element:${element}`);
         core.info(`--- element.id:${element.id}`);
         core.info(`--- element.name:${element.name}`);
+        core.info(`--- element.tag_name:${element.tag_name}`);
         core.info(`--- element.draft:${element.draft}`);
         core.info(`--- element.prerelease:${element.prerelease}`);
     })
