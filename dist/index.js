@@ -1517,6 +1517,7 @@ function run() {
             core.info(`--- element.status:${element.status}`);
             core.info(`--- element.workflow_id:${element.workflow_id}`);
             core.info(`--- element.created_at:${element.created_at}`);
+            core.info(`--- element.updated_at:${element.updated_at}`);
             core.info(`--- element.logs_url:${element.logs_url}`);
         });
     });
