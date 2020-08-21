@@ -1507,7 +1507,7 @@ function run() {
             per_page: 3,
             page: 1
         });
-        core.info(`Length = ${listWorkFlawsRuns.data.total_count}`);
+        core.info(`total_count = ${listWorkFlawsRuns.data.total_count}`);
         listWorkFlawsRuns.data.workflow_runs.forEach((element) => {
             core.info(`---------------------------------------------`);
             core.info(`--- element.id:${element.id}`);
