@@ -1504,6 +1504,8 @@ function run() {
         let listWorkFlawsRuns = yield octokit.actions.listWorkflowRunsForRepo({
             repo: github.context.repo.repo,
             owner: github.context.repo.owner,
+            per_page: 3,
+            page: 1
         });
         core.info(`Length = ${listWorkFlawsRuns.data.total_count}`);
         listWorkFlawsRuns.data.workflow_runs.forEach((element) => {
