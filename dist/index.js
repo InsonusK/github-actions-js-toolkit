@@ -1491,9 +1491,9 @@ function run() {
             per_page: 10,
             page: 1
         });
-        core.info(`-- Length = ${repoList.data.length}`);
+        core.info(`Length = ${repoList.data.length}`);
         repoList.data.forEach((element) => {
-            core.info(`--- element:${element}`);
+            core.info(`---------------------------------------------`);
             core.info(`--- element.id:${element.id}`);
             core.info(`--- element.name:${element.name}`);
             core.info(`--- element.tag_name:${element.tag_name}`);
@@ -1505,8 +1505,9 @@ function run() {
             repo: github.context.repo.repo,
             owner: github.context.repo.owner,
         });
-        core.info(`-- Length = ${listWorkFlawsRuns.data.total_count}`);
+        core.info(`Length = ${listWorkFlawsRuns.data.total_count}`);
         listWorkFlawsRuns.data.workflow_runs.forEach((element) => {
+            core.info(`---------------------------------------------`);
             core.info(`--- element.id:${element.id}`);
             core.info(`--- element.head_branch:${element.head_branch}`);
             core.info(`--- element.event:${element.event}`);
