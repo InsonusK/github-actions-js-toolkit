@@ -1509,12 +1509,13 @@ function run() {
         listWorkFlawsRuns.data.workflow_runs.forEach((element) => {
             core.info(`---------------------------------------------`);
             core.info(`--- element.id:${element.id}`);
+            core.info(`--- element.run_number:${element.run_number}`);
             core.info(`--- element.head_branch:${element.head_branch}`);
             core.info(`--- element.event:${element.event}`);
             core.info(`--- element.status:${element.status}`);
             core.info(`--- element.workflow_id:${element.workflow_id}`);
             core.info(`--- element.created_at:${element.created_at}`);
-            core.info(`--- element. logs_url:${element.logs_url}`);
+            core.info(`--- element.logs_url:${element.logs_url}`);
         });
     });
 }
